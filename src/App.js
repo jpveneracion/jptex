@@ -1,24 +1,18 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import "./style/style.css";
+import "./style/bootstrap.min.css";
+import Header from "./components/header/header";
+import TripTable from "./components/tripTable";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>jpx3mDOTcom</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <Header />
+        <br />
+        <TripTable />
+      </React.Fragment>
     );
   }
 }

@@ -1,0 +1,124 @@
+.trip-table {
+  font-size: 0.7rem;
+  color: #000;
+}
+
+.trip-table .trip-headers {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.trip-headers .small-hide {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block !important;
+  }
+
+  .d-flex {
+    display: block !important;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+
+  table {
+    width: 98% !important;
+    margin: 0 auto;
+    border-top: none !important;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    margin: 0 0 5px 0 !important;
+  }
+
+  tr td {
+    border-top: none !important;
+  }
+  tr td:last-child {
+    border-bottom: none !important;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    max-width: 100% !important;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding: 5px 0 5px 50% !important;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  /*
+	Label the data
+	*/
+  td:nth-of-type(1):before {
+    content: "Trip No.:";
+  }
+  td:nth-of-type(2):before {
+    content: "Bus Company:";
+  }
+  td:nth-of-type(3):before {
+    content: "Plate No.:";
+  }
+  td:nth-of-type(4):before {
+    content: "Destination:";
+  }
+  td:nth-of-type(5):before {
+    content: "Departure Time:";
+  }
+  td:nth-of-type(6):before {
+    content: "Gate:";
+  }
+  td:nth-of-type(7):before {
+    content: "Bay:";
+  }
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .trip-table {
+    font-size: 1rem;
+    color: #000;
+  }
+
+  .trip-headers .small-hide {
+    display: block;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

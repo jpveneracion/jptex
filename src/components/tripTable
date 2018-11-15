@@ -1,0 +1,33 @@
+import React, { Component } from "react";
+import { Row, Col } from "reactstrap";
+import "./tripTable.css";
+
+class TripTable extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      appName: "JP Trip Exchange"
+    };
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <div className="container-fluid trip-table">
+          <Row className="trip-headers">
+            <Col className="col-1">Trip No.</Col>
+            <Col className="col-3">Bus Company</Col>
+            <Col className="col-1 small-hide">Plate Number</Col>
+            <Col className="col-4">Destination</Col>
+            <Col className="col-1">Dep. Time</Col>
+            <Col className="col-1">Gate</Col>
+            <Col className="col-1">Bay</Col>
+          </Row>
+        </div>
+      </React.Fragment>
+    );
+  }
+}
+
+export default TripTable;
