@@ -18,7 +18,10 @@ class Header extends Component {
     return (
       <Row className="header">
         <Col sm={{ size: 1 }}>
-          <img src={"/images/logo.png"} alt="Terminal Exchange" />
+          <img
+            src={window.location.origin + "/src/images/logo.png"}
+            alt="Terminal Exchange"
+          />
         </Col>
 
         <Col sm={{ size: 1 }}>
